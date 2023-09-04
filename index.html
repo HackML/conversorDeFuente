@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Josefin+Sans:ital@1&family=Pacifico&display=swap" rel="stylesheet">
+
+    <title>Conversor</title>
+  </head>
+  <body>
+    <header>
+      <div id="header"><h1>Conversor Texto</h1></div>
+    </header>
+    <main>
+      <div id="general">
+      <p>¡Introduce el texto que quieras, y transformalo en las mejores tipografías!</p>
+      <div id="agregar-texto">
+        
+        <input
+          id="input"
+          class="input-style"
+          type="text"
+          placeholder="Agrega tu texto aquí"
+        />
+
+        <input id="font1" class="input-style fuente1" type="text" readonly="readonly" />
+        <input id="font2" class="input-style fuente2" type="text" readonly="readonly" />
+        <input id="font3" class="input-style fuente3" type="text" readonly="readonly" />
+        <input id="font4" class="input-style fuente4" type="text" readonly="readonly" />
+      </div>  
+    </div>
+    </main>
+    <footer>
+      <div id="footer">
+        <h3>Created by Lukas Bentivenga</h3
+          >
+      </div>
+    </footer>
+
+    <script>$(document).ready(function () {
+      $("#input").keyup(function () {
+          var value = $(this).val();
+          $("#font1").val(value);
+          $("#font2").val(value);
+          $("#font3").val(value);
+          $("#font4").val(value);
+      });
+    });
+    </script>
+
+  </body>
+</html>
